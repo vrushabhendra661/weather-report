@@ -1,0 +1,144 @@
+.search-bar-container {
+  margin: 30px 0;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.search-form {
+  display: flex;
+  gap: 15px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  font-size: 1.5rem;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.search-input {
+  width: 100%;
+  padding: 18px 50px 18px 60px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  outline: none;
+  box-shadow: 0 4px 15px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  background: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.clear-button {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.clear-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.clear-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.search-button {
+  padding: 18px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.search-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
+}
+
+.search-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.search-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .search-input {
+    padding: 15px 50px 15px 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    font-size: 0.9rem;
+    padding: 12px 45px 12px 50px;
+  }
+
+  .search-icon {
+    font-size: 1.2rem;
+    left: 15px;
+  }
+
+  .search-button {
+    padding: 15px 30px;
+    font-size: 0.9rem;
+  }
+}
+
